@@ -43,7 +43,7 @@ jest.mock('../config/index', () => ({
     },
 }));
 
-// Setup and teardown for test data
+//teardown for test data
 beforeAll(async () => {
     // Ensure test data directory exists
     await fs.mkdir(testDataDir, { recursive: true });
