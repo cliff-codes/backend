@@ -2,12 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
-import config from './config/index.js';
-import routes from './routes/index.js';
-import { errorHandler, notFound } from './middleware/errorHandler.js';
-import { setupSwagger } from './docs/swagger.js';
-import { apiLimiter } from './middleware/rateLimit.js';
-import logger from './utils/logger.js';
+import config from './config/index';
+import routes from './routes/index';
+import { errorHandler, notFound } from './middleware/errorHandler';
+import { setupSwagger } from './docs/swagger';
+import { apiLimiter } from './middleware/rateLimit';
+import logger from './utils/logger';
 
 const app = express();
 

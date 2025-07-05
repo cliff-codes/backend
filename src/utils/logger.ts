@@ -1,4 +1,4 @@
-import config from '../config/index.js';
+import config from '../config/index';
 
 type LogLevel = 'ERROR' | 'WARN' | 'INFO' | 'DEBUG';
 
