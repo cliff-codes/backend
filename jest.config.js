@@ -20,4 +20,5 @@ export default {
     coverageDirectory: 'coverage',
     coverageReporters: ['text', 'lcov', 'html'],
     setupFilesAfterEnv: ['<rootDir>/src/__tests__/setup.ts'],
+    maxWorkers: 1, // Run tests sequentially to avoid file corruption
 }; 

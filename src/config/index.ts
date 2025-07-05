@@ -9,7 +9,7 @@ const config = {
         corsOrigin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : ['http://localhost:3000', 'http://localhost:3001'],
     },
     jwt: {
-        secret: process.env.JWT_SECRET || 'your-secret-key',
+        secret: process.env.JWT_SECRET || 'VPipi8vNClu72rlUqpmcJsE9er5Rplg7MqB+/SXcv1V2e24lAIIu3Xdz9wkAyM2Jht1RI4WSXp/be2LPtaD0rQ==',
         expiresIn: process.env.JWT_EXPIRES_IN || '24h',
     },
     security: {

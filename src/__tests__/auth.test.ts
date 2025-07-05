@@ -1,8 +1,19 @@
 import { agent as request } from 'supertest';
+import fs from 'fs/promises';
+import path from 'path';
 import app from '../server';
 import { createUser } from '../services/userService';
 
+// Get the test data file path
+const testDataDir = path.join(__dirname, '../../data/test');
+const testUsersFile = path.join(testDataDir, 'users.json');
+
 describe('Auth Endpoints', () => {
+    // Reset the users file before each test
+    beforeEach(async () => {
+        await fs.writeFile(testUsersFile, '[]');
+    });
+
     describe('POST /api/auth/register', () => {
         it('should register a new user successfully', async () => {
             const testUser = {
